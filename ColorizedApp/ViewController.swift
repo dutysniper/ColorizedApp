@@ -11,21 +11,21 @@ final class ViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet weak var redValue: UILabel! {
-        didSet{
+        didSet {
                   redValue.font = UIFont.monospacedDigitSystemFont(
                       ofSize: UIFont.systemFontSize,
                       weight: UIFont.Weight.regular)
               }
     }
     @IBOutlet weak var greenValue: UILabel! {
-        didSet{
+        didSet {
                   greenValue.font = UIFont.monospacedDigitSystemFont(
                       ofSize: UIFont.systemFontSize,
                       weight: UIFont.Weight.regular)
               }
     }
     @IBOutlet weak var blueValue: UILabel! {
-        didSet{
+        didSet {
                   blueValue.font = UIFont.monospacedDigitSystemFont(
                       ofSize: UIFont.systemFontSize,
                       weight: UIFont.Weight.regular)
