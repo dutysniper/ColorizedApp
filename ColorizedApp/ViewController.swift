@@ -22,9 +22,8 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setColor()
-       
-        
     }
+    
     //MARK: IBActions
     @IBAction func changeColorFromSlider() {
         setColor()
@@ -39,6 +38,7 @@ final class ViewController: UIViewController {
             alpha: 1)
         setValue(for: redValue, blueValue, greenValue)
     }
+    
     private func setValue(for labels: UILabel...) {
         labels.forEach { label in
             switch label {
