@@ -74,25 +74,25 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="HGx-1i-dNH">
                                         <rect key="frame" x="90" y="0.0" width="306" height="142"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="grb-mt-Wet">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="grb-mt-Wet">
                                                 <rect key="frame" x="-2" y="0.0" width="310" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
                                                 <connections>
-                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zer-0R-Ink"/>
+                                                    <action selector="changeColorFromSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="0mK-hc-GL3"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wVY-ZO-w2s">
+                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wVY-ZO-w2s">
                                                 <rect key="frame" x="-2" y="56" width="310" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                                 <connections>
-                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="aAZ-rA-RoT"/>
+                                                    <action selector="changeColorFromSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="Wxd-nO-CXf"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7qW-0d-aNq">
+                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7qW-0d-aNq">
                                                 <rect key="frame" x="-2" y="112" width="310" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                                 <connections>
-                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="BUB-NQ-R7v"/>
+                                                    <action selector="changeColorFromSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="wtg-Pg-pOz"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
