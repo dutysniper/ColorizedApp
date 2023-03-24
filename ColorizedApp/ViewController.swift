@@ -28,8 +28,6 @@ final class ViewController: UIViewController {
     //MARK: IBActions
     @IBAction func changeColorFromSlider() {
         setColor()
-        setValue(for: redValue, blueValue, greenValue)
-        
     }
     
    //MARK: Private methods
