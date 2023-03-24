@@ -12,24 +12,24 @@ final class ViewController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var redValue: UILabel! {
         didSet {
-                  redValue.font = UIFont.monospacedDigitSystemFont(
-                      ofSize: UIFont.systemFontSize,
-                      weight: UIFont.Weight.regular)
-              }
+            redValue.font = UIFont.monospacedDigitSystemFont(
+                ofSize: UIFont.systemFontSize,
+                weight: UIFont.Weight.regular)
+        }
     }
     @IBOutlet weak var greenValue: UILabel! {
         didSet {
-                  greenValue.font = UIFont.monospacedDigitSystemFont(
-                      ofSize: UIFont.systemFontSize,
-                      weight: UIFont.Weight.regular)
-              }
+            greenValue.font = UIFont.monospacedDigitSystemFont(
+                ofSize: UIFont.systemFontSize,
+                weight: UIFont.Weight.regular)
+        }
     }
     @IBOutlet weak var blueValue: UILabel! {
         didSet {
-                  blueValue.font = UIFont.monospacedDigitSystemFont(
-                      ofSize: UIFont.systemFontSize,
-                      weight: UIFont.Weight.regular)
-              }
+            blueValue.font = UIFont.monospacedDigitSystemFont(
+                ofSize: UIFont.systemFontSize,
+                weight: UIFont.Weight.regular)
+        }
     }
     @IBOutlet weak var shape: UIView!
     
