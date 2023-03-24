@@ -12,23 +12,17 @@ final class ViewController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var redValue: UILabel! {
         didSet {
-            redValue.font = UIFont.monospacedDigitSystemFont(
-                ofSize: UIFont.systemFontSize,
-                weight: UIFont.Weight.regular)
+            fixLabelShaking(for: redValue)
         }
     }
     @IBOutlet weak var greenValue: UILabel! {
         didSet {
-            greenValue.font = UIFont.monospacedDigitSystemFont(
-                ofSize: UIFont.systemFontSize,
-                weight: UIFont.Weight.regular)
+            fixLabelShaking(for: greenValue)
         }
     }
     @IBOutlet weak var blueValue: UILabel! {
         didSet {
-            blueValue.font = UIFont.monospacedDigitSystemFont(
-                ofSize: UIFont.systemFontSize,
-                weight: UIFont.Weight.regular)
+            fixLabelShaking(for: blueValue)
         }
     }
     @IBOutlet weak var shape: UIView!
@@ -70,6 +64,11 @@ final class ViewController: UIViewController {
     
     private func stringFormatting(for slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
+    }
+    private func fixLabelShaking(for label: UILabel) {
+        label.font = UIFont.monospacedDigitSystemFont(
+            ofSize: UIFont.systemFontSize,
+            weight: UIFont.Weight.regular)
     }
 }
 
