@@ -10,9 +10,27 @@ import UIKit
 final class ViewController: UIViewController {
 
     //MARK: IBOutlets
-    @IBOutlet weak var redValue: UILabel!
-    @IBOutlet weak var greenValue: UILabel!
-    @IBOutlet weak var blueValue: UILabel!
+    @IBOutlet weak var redValue: UILabel! {
+        didSet{
+                  redValue.font = UIFont.monospacedDigitSystemFont(
+                      ofSize: UIFont.systemFontSize,
+                      weight: UIFont.Weight.regular)
+              }
+    }
+    @IBOutlet weak var greenValue: UILabel! {
+        didSet{
+                  greenValue.font = UIFont.monospacedDigitSystemFont(
+                      ofSize: UIFont.systemFontSize,
+                      weight: UIFont.Weight.regular)
+              }
+    }
+    @IBOutlet weak var blueValue: UILabel! {
+        didSet{
+                  blueValue.font = UIFont.monospacedDigitSystemFont(
+                      ofSize: UIFont.systemFontSize,
+                      weight: UIFont.Weight.regular)
+              }
+    }
     @IBOutlet weak var shape: UIView!
     
     @IBOutlet weak var redSlider: UISlider!
