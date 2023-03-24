@@ -78,21 +78,21 @@
                                                 <rect key="frame" x="-2" y="0.0" width="310" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
                                                 <connections>
-                                                    <action selector="changeRedValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="vjZ-e3-UZh"/>
+                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zer-0R-Ink"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wVY-ZO-w2s">
+                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wVY-ZO-w2s">
                                                 <rect key="frame" x="-2" y="56" width="310" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                                 <connections>
-                                                    <action selector="changeGreenValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="mRo-5V-C4I"/>
+                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="aAZ-rA-RoT"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7qW-0d-aNq">
+                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7qW-0d-aNq">
                                                 <rect key="frame" x="-2" y="112" width="310" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                                 <connections>
-                                                    <action selector="changeBlueValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="G3o-dp-HJi"/>
+                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="BUB-NQ-R7v"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -118,8 +118,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueLabel" destination="USQ-re-dXD" id="VJR-e1-k7s"/>
+                        <outlet property="blueSlider" destination="7qW-0d-aNq" id="g4w-BE-Ksg"/>
+                        <outlet property="blueValue" destination="USQ-re-dXD" id="VJR-e1-k7s"/>
+                        <outlet property="greenSlider" destination="wVY-ZO-w2s" id="iaD-EA-ak2"/>
                         <outlet property="greenValue" destination="AhR-mz-MmV" id="7aC-9p-Rj7"/>
+                        <outlet property="redSlider" destination="grb-mt-Wet" id="8aI-Ed-K24"/>
                         <outlet property="redValue" destination="owU-CW-e4L" id="yFM-xq-Ynf"/>
                         <outlet property="shape" destination="aSl-I1-mIs" id="phC-M4-UAG"/>
                     </connections>
