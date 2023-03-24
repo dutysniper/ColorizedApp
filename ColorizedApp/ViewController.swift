@@ -21,6 +21,7 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        shape.layer.cornerRadius = 15
         setColor()
     }
     
