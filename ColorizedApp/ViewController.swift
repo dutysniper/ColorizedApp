@@ -12,17 +12,17 @@ final class ViewController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var redValue: UILabel! {
         didSet {
-            fixLabelShaking(for: redValue)
+            setupLabel(for: redValue)
         }
     }
     @IBOutlet weak var greenValue: UILabel! {
         didSet {
-            fixLabelShaking(for: greenValue)
+            setupLabel(for: greenValue)
         }
     }
     @IBOutlet weak var blueValue: UILabel! {
         didSet {
-            fixLabelShaking(for: blueValue)
+            setupLabel(for: blueValue)
         }
     }
     @IBOutlet weak var shape: UIView!
@@ -65,7 +65,8 @@ final class ViewController: UIViewController {
     private func stringFormatting(for slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
-    private func fixLabelShaking(for label: UILabel) {
+    
+    private func setupLabel(for label: UILabel) {
         label.font = UIFont.monospacedDigitSystemFont(
             ofSize: UIFont.systemFontSize,
             weight: UIFont.Weight.regular)
