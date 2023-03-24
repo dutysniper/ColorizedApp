@@ -28,9 +28,7 @@ final class ViewController: UIViewController {
     //MARK: IBActions
     @IBAction func changeColorFromSlider() {
         setColor()
-        setValue(for: redValue)
-        setValue(for: greenValue)
-        setValue(for: blueValue)
+        setValue(for: redValue, blueValue, greenValue)
         
     }
     
@@ -41,9 +39,7 @@ final class ViewController: UIViewController {
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1)
-        setValue(for: redValue)
-        setValue(for: greenValue)
-        setValue(for: blueValue)
+        setValue(for: redValue, blueValue, greenValue)
     }
     private func setValue(for labels: UILabel...) {
         labels.forEach { label in
@@ -54,6 +50,7 @@ final class ViewController: UIViewController {
             }
         }
     }
+    
     private func stringFormatting(for slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
