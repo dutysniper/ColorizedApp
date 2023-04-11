@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bpJ-mo-tey"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="BFp-2K-o2n">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="adg-EI-dki">
@@ -141,12 +141,12 @@
                     </view>
                     <connections>
                         <outlet property="shape" destination="aSl-I1-mIs" id="phC-M4-UAG"/>
-                        <outletCollection property="sliders" destination="grb-mt-Wet" collectionClass="NSMutableArray" id="Df3-Hu-yhg"/>
-                        <outletCollection property="sliders" destination="wVY-ZO-w2s" collectionClass="NSMutableArray" id="We0-1e-tB6"/>
-                        <outletCollection property="sliders" destination="7qW-0d-aNq" collectionClass="NSMutableArray" id="qMa-3n-vjw"/>
                         <outletCollection property="colorLabels" destination="owU-CW-e4L" collectionClass="NSMutableArray" id="S9s-LH-XRO"/>
                         <outletCollection property="colorLabels" destination="AhR-mz-MmV" collectionClass="NSMutableArray" id="zMt-ur-P7S"/>
                         <outletCollection property="colorLabels" destination="USQ-re-dXD" collectionClass="NSMutableArray" id="9Lj-TJ-fN3"/>
+                        <outletCollection property="sliders" destination="grb-mt-Wet" collectionClass="NSMutableArray" id="gVL-bu-4RD"/>
+                        <outletCollection property="sliders" destination="wVY-ZO-w2s" collectionClass="NSMutableArray" id="QZH-ze-bCM"/>
+                        <outletCollection property="sliders" destination="7qW-0d-aNq" collectionClass="NSMutableArray" id="lIS-IZ-42A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -51,22 +51,21 @@ final class SettingsViewController: UIViewController {
     private func stringFormatting(for slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
-    
     private func setupUI() {
         shape.layer.cornerRadius = 15
+        guard let colors = viewBackgroundColor?.cgColor.components else { return }
+        
         for label in colorLabels {
             label.font = UIFont.monospacedDigitSystemFont(
                 ofSize: UIFont.systemFontSize,
                 weight: UIFont.Weight.regular)
         }
-        guard let viewRGBColor = viewBackgroundColor.cgColor.components else { return }
-        for (slider, color) in zip(sliders, viewRGBColor) {
+        for (label, (slider, color)) in zip(colorLabels, zip(sliders, colors)) {
             slider.value = Float(color)
-        }
-        for (label, slider) in zip(colorLabels, sliders) {
             label.text = stringFormatting(for: slider)
         }
         setColor()
+        }
+
     }
-}
 
