@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rdh-1d-yIQ">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,6 +8,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="TNM-TV-vb6">
+            <objects>
+                <viewController id="n13-Dc-Qh8" customClass="MainViewController" customModule="ColorizedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eD4-5v-Dnh">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bpJ-mo-tey"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BFp-2K-o2n">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="adg-EI-dki">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="6WE-sm-K8W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMF-37-vTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25.233644859813083" y="1.9438444924406049"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -118,21 +140,40 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueSlider" destination="7qW-0d-aNq" id="g4w-BE-Ksg"/>
-                        <outlet property="blueValue" destination="USQ-re-dXD" id="VJR-e1-k7s"/>
-                        <outlet property="greenSlider" destination="wVY-ZO-w2s" id="iaD-EA-ak2"/>
-                        <outlet property="greenValue" destination="AhR-mz-MmV" id="7aC-9p-Rj7"/>
-                        <outlet property="redSlider" destination="grb-mt-Wet" id="8aI-Ed-K24"/>
-                        <outlet property="redValue" destination="owU-CW-e4L" id="yFM-xq-Ynf"/>
                         <outlet property="shape" destination="aSl-I1-mIs" id="phC-M4-UAG"/>
+                        <outletCollection property="sliders" destination="grb-mt-Wet" collectionClass="NSMutableArray" id="Df3-Hu-yhg"/>
+                        <outletCollection property="sliders" destination="wVY-ZO-w2s" collectionClass="NSMutableArray" id="We0-1e-tB6"/>
+                        <outletCollection property="sliders" destination="7qW-0d-aNq" collectionClass="NSMutableArray" id="qMa-3n-vjw"/>
+                        <outletCollection property="colorLabels" destination="owU-CW-e4L" collectionClass="NSMutableArray" id="S9s-LH-XRO"/>
+                        <outletCollection property="colorLabels" destination="AhR-mz-MmV" collectionClass="NSMutableArray" id="zMt-ur-P7S"/>
+                        <outletCollection property="colorLabels" destination="USQ-re-dXD" collectionClass="NSMutableArray" id="9Lj-TJ-fN3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135.19999999999999" y="2.2488755622188905"/>
+            <point key="canvasLocation" x="764.01869158878503" y="1.9438444924406049"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UxZ-HQ-hry">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rdh-1d-yIQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s4R-tp-cH2">
+                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n13-Dc-Qh8" kind="relationship" relationship="rootViewController" id="tV3-qS-jTl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53d-Oc-jnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-925.23364485981301" y="1.9438444924406049"/>
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

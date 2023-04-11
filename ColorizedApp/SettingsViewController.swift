@@ -10,33 +10,30 @@ import UIKit
 final class SettingsViewController: UIViewController {
 
 //MARK: IBOutlets
-    @IBOutlet weak var redValue: UILabel!
-    @IBOutlet weak var greenValue: UILabel!
-    @IBOutlet weak var blueValue: UILabel!
+    @IBOutlet private var colorLabels: [UILabel]!
+    
+    @IBOutlet private var sliders: [UISlider]!
     
     @IBOutlet weak var shape: UIView!
     
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
+    var viewBackgroundColor: UIColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setColor()
     }
     
 //MARK: IBActions
    
-    @IBAction func sliderAction(_ sender: UISlider) {
+    @IBAction private func sliderAction(_ sender: UISlider) {
         setColor()
         switch sender {
-        case redSlider:
-            redValue.text = stringFormatting(for: redSlider)
-        case greenSlider:
-            greenValue.text = stringFormatting(for: greenSlider)
+        case sliders[0]:
+            colorLabels[0].text = stringFormatting(for: sliders[0])
+        case sliders[1]:
+            colorLabels[1].text = stringFormatting(for: sliders[1])
         default:
-            blueValue.text = stringFormatting(for: blueSlider)
+            colorLabels[2].text = stringFormatting(for: sliders[2])
         }
     }
     
@@ -44,9 +41,9 @@ final class SettingsViewController: UIViewController {
 //MARK: Private methods
     private func setColor() {
         shape.backgroundColor = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
+            red: CGFloat(sliders[0].value),
+            green: CGFloat(sliders[1].value),
+            blue: CGFloat(sliders[2].value),
             alpha: 1)
     }
     
@@ -57,15 +54,19 @@ final class SettingsViewController: UIViewController {
     
     private func setupUI() {
         shape.layer.cornerRadius = 15
-        redValue.text = stringFormatting(for: redSlider)
-        greenValue.text = stringFormatting(for: redSlider)
-        blueValue.text = stringFormatting(for: redSlider)
-        for label in [redValue, greenValue, blueValue] {
-            label?.font = UIFont.monospacedDigitSystemFont(
+        for label in colorLabels {
+            label.font = UIFont.monospacedDigitSystemFont(
                 ofSize: UIFont.systemFontSize,
                 weight: UIFont.Weight.regular)
         }
-        
+        guard let viewRGBColor = viewBackgroundColor.cgColor.components else { return }
+        for (slider, color) in zip(sliders, viewRGBColor) {
+            slider.value = Float(color)
+        }
+        for (label, slider) in zip(colorLabels, sliders) {
+            label.text = stringFormatting(for: slider)
+        }
+        setColor()
     }
 }
 
