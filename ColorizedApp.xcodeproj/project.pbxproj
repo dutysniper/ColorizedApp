@@ -60,14 +60,22 @@
 			children = (
 				910F5B1B29CCDEA3000E3ECC /* AppDelegate.swift */,
 				910F5B1D29CCDEA3000E3ECC /* SceneDelegate.swift */,
-				918AD59F29E59CE600B24DBF /* MainViewController.swift */,
-				910F5B1F29CCDEA3000E3ECC /* SettingsViewController.swift */,
+				918AD5A629E6EADE00B24DBF /* ViewContollers */,
 				910F5B2129CCDEA3000E3ECC /* Main.storyboard */,
 				910F5B2429CCDEA5000E3ECC /* Assets.xcassets */,
 				910F5B2629CCDEA5000E3ECC /* LaunchScreen.storyboard */,
 				910F5B2929CCDEA5000E3ECC /* Info.plist */,
 			);
 			path = ColorizedApp;
+			sourceTree = "<group>";
+		};
+		918AD5A629E6EADE00B24DBF /* ViewContollers */ = {
+			isa = PBXGroup;
+			children = (
+				918AD59F29E59CE600B24DBF /* MainViewController.swift */,
+				910F5B1F29CCDEA3000E3ECC /* SettingsViewController.swift */,
+			);
+			path = ViewContollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
