@@ -27,6 +27,9 @@ final class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        colorValueTF.forEach { textField in
+            textField.delegate = self
+        }
         UITextField.appearance().inputAccessoryView = addToolBarToNumKeyboard()
     }
     
@@ -107,14 +110,17 @@ extension SettingsViewController {
 extension SettingsViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let valueTF = textField.text else { return }
-        if !(0...1).contains(Float(valueTF) ?? 5) {
-            showAlert(tfTag: textField.tag)
-        } else if valueTF.isEmpty {
+        if valueTF.isEmpty {
             sliders[textField.tag].value = 0
+            colorLabels[textField.tag].text = String(0.00)
+            setColor()
+        } else if !(0...1).contains(Float(valueTF) ?? 5) {
+            showAlert(tfTag: textField.tag)
         } else {
             guard let validValue = Float(valueTF) else { return }
             sliders[textField.tag].value = validValue
             colorLabels[textField.tag].text = String(validValue)
+            setColor()
         }
     }
 }
